@@ -1,7 +1,0 @@
-version: 1.0.0-{build}
-confirguration: Release
-cache:
-	-packages -> **\packages.config
-before_build: nuget restore
-build:
-	publish_wap: true

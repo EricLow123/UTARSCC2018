@@ -1,0 +1,12 @@
+version: 1.0.0-{build}
+confirguration: LIVE
+cache:
+	-packages -> **\packages.config
+before_build: nuget restore
+build:
+	publish_wap: true
+deploy:
+  provider: Environment
+  name: LIVE.UTAR.edu.my
+  on:
+    branch: master
